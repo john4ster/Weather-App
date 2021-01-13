@@ -1,5 +1,3 @@
-const { REACT_APP_MY_ENV } = process.env;
-
 async function fetchWeather(city) {
 
   const apiKey = '12345'; //Your api key here, application will not work without it
