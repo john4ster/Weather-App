@@ -9,8 +9,8 @@ function App(){
 
   //Get data from api using enter key
   const enterSearch = evt => {
-    if (evt.key === "Enter") {
-      fetchWeather(city)
+    if (evt.key === 'Enter') {
+      fetchWeather(city, 'imperial')
         .then((data) => {
           setWeather(data)
           setCity('');
@@ -38,7 +38,7 @@ function App(){
         <input className="searchBar" placeholder="Enter a city" onChange={e => setCity(e.target.value)} value={city} onKeyPress={enterSearch}></input>
         <button className="searchButton" onClick={search}>Search</button>
       </div>
-      {(typeof weather.main != "undefined") ? (
+      {(typeof weather.main != "undefined") ? ( //Only displays if weather.main is not undefined
       <WeatherCard city={weather.name} country={weather.sys.country} weather={weather.weather[0].main} temp={Math.round(weather.main.temp) + " °F"}/>
       ) : ('')}
     </div>
