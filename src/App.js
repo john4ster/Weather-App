@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import WeatherCard from './components/weatherCard';
-import { fetchWeather } from './api/fetchWeather';
+import { fetchWeather } from './api/FetchWeather';
 
 function App(){
 
